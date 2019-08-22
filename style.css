@@ -1,0 +1,324 @@
+* {
+box-sizing: border-box;
+}
+
+*:focus {
+	outline: none;
+}
+body {
+    font-family: Arial;
+    background-color: #FFFFFF;
+    padding: 0px;
+    margin:0;
+    font-size:12px;
+}
+
+
+#hContainer
+{
+    margin: 0 auto;
+    max-width: 1280px;
+}
+
+  
+  
+#hContainer img {
+display:inline;  float:left; width: 200px; margin-top:17px; margin-left:82px;}
+
+
+
+
+#closebutton
+ img {
+    position: relative;    
+    left:360px;
+    top:15px; 
+    width: 22px;
+    border-style: none; 	 
+}
+
+#login-submit { position: relative;
+    margin-left: 0px;
+    margin-top:  0px;
+    display: inline;}
+
+
+.login-screen 
+{ 
+    margin: 0 auto;
+    max-width: 1280px;
+    position: relative;
+}
+
+
+#loginbox
+{
+    position:absolute;
+    top:0px;
+    left:75px;
+    margin-left: 10px;
+}
+
+#languageGroup {margin-top:25px;}
+#languageGroup #languageChoice {font-size:12px; font-weight: bold; margin-right:40px;}
+#languageGroup a {color:#095285; font-size:12px; text-decoration:none; display:block;margin-top:15px;}
+
+
+
+#header
+{
+    background-color:#095284; height:80px;
+}
+
+
+
+.lblClear {clear:both;border:1px}
+
+
+
+.login { position: relative; }
+
+#bckImage { 
+    text-align: center;
+    Overflow: hidden;
+}
+
+
+.control-group {margin-bottom:20px; text-align:left;}
+
+.control-group input {width:270px; font-size:14px; height:26px; 
+margin-top:5px;border: 2px solid;border-color:#10467B;}
+
+
+.lbl {color:#095285; font-size:16px;}
+
+
+#agmsg {color:#095285; 
+    font-size:12px; 
+    width:325px;
+    position:absolute;
+    margin-left: 60px;
+    margin-top: -50px;}
+#agmsg a {text-decoration:underline; color:#095285;font-weight:bold;}
+
+#secmessage1 {display:inline;}
+#secmessage2 {display:inline;}
+#useragree {display:inline;}
+#useragree a {text-decoration:none;}
+
+#message {font-size:18px; width:357px;margin-bottom:25px;}
+
+
+
+#SetPassMessage {margin-top:0;}
+.wrapper {width:768px;}
+
+
+#Environment {font-size:22px;margin-left:275px;}
+
+
+@media (max-width: 768px)
+ {
+
+body {background-color:#10467B;}
+
+#hContainer {display:none !important;}
+#h2Container {text-align:center;}
+#h2Container img {height:auto;width:33%;margin-top:10px;margin-left:-50px;}
+
+#bckImage {display:none;}
+
+#closebutton {display:none !important;}
+
+.login-screen 
+{ 
+    margin: 0 auto;
+    max-width: 1280px;
+    position: relative;}
+
+    #loginbox { position:relative; left:0; top:85px; }
+    .login {width:100%; position:absolute; top:10px; margin-top:0px; margin-left: 35px; }
+
+    #message {
+    margin-right: 36px;
+    bottom: 0px;
+    font-size: 15px;
+    font-weight: normal;
+    max-width: 600px;
+    height: 40px;
+    width: initial;
+    color: #E8EBF3;
+    display: inline-block;
+    margin-bottom:0px;
+    xxfloat: left;
+    xxposition: relative;
+}
+
+.lbl {color:#E8EBF3; font-size:14px;}
+
+
+.control-group {display: block;
+	padding-right:40px;
+        padding-top:1px
+}
+
+.control-group input{width:200px; display:block; }
+
+
+.lblClear {clear:both; width:175;}
+
+
+
+
+#login-submit { 
+    display:inline;
+    margin-left: 220px;
+    margin-right: 0px;
+    vertical-align: top;
+    margin-bottom:0px;
+    margin-top: -118px;
+    width: 35px;
+}
+#agmsg {color:#E8EBF3; 
+    display: inline;
+    font-size:12px; 
+    max-width:305px;
+    width:initial;
+    position:absolute;
+    margin-left: 275px;
+    margin-top: -129px;
+    margin-right: 47px;
+}
+#agmsg a {text-decoration:underline; color:#E8EBF3;font-weight:bold;}
+
+
+.control-group select{background-color: transparent;font-size:12px;background-color:#FFFFFF;}
+
+.control-group select option {color:#000000;}
+
+#languageGroup {margin-left:275px; margin-top: -25px;}
+
+
+#languageGroup a {display:inline;margin-top:initial;}
+
+#slider1_container {margin-top:230px;}
+
+#Environment {font-size:22px;margin-left:1px;Margin-top:-35px;}
+
+
+}
+
+
+
+@media (min-width: 769px)
+{
+    #slider1_container {display:none !important;}
+    #h2Container {display:none !important;}
+}
+
+
+@media (max-width: 529px){
+    #agmsg { margin-left: 197px;}
+
+    #languageGroup {margin-left:196px;}
+
+    .control-group input{width:140px }
+
+
+    #login-submit {  margin-left: 152px;}
+
+#h2Container img {height:auto;width:50%;margin-top:10px;margin-left:-30px;}
+
+}
+
+@media (max-width: 480px){
+    
+
+    #message {font-size: 13px;}
+
+    .lbl {font-size:13px;}
+
+
+    #loginbox {top:60px; }
+    .login {margin-left: 15px; }
+
+    #languageGroup {margin-top: -1px; }
+
+    #agmsg { margin-top: -129px;font-size:11px;margin-right: 32px;}
+
+    .control-group select{font-size:11px;}
+
+    #login-submit {margin-top: -118px;}
+
+}
+
+@media (max-width: 450px){
+
+    #languageGroup {margin-left: 1px;}
+
+    #Environment {font-size:22px;margin-left:1px;Margin-top:-65px;}
+}
+
+
+@media (max-width: 380px)
+{
+
+    #message {font-size: 12px;}
+
+    .lbl {font-size:12px;}
+
+
+    #languageGroup {margin-top: -1px;}
+
+    .control-group input{width:125px }
+
+
+    .control-group select{font-size:10px;}
+
+    #agmsg { margin-left: 192px;font-size:10px;margin-right: 25px;}
+
+
+    #login-submit {  margin-left: 142px;}
+
+}
+
+
+@media (max-width: 325px)
+{
+
+    #message {font-size: 11px;}
+
+    .lbl {font-size:11px;}
+
+
+    #login-submit {margin-left: 135px;}
+
+    #agmsg { margin-left: 182px;margin-right: 30px;}
+
+
+}
+
+
+@media (max-width: 300px)
+{
+
+    #message {font-size: 10px;}
+
+    .lbl {font-size:10px;}
+
+
+    #login-submit {margin-left: 130px;}
+
+    #agmsg { margin-left: 175px;margin-right: 30px;font-size:9px;}
+
+    .control-group select{font-size:9px;}
+
+}
+
+
+
+
+@media (min-width: 10px)
+{
+    #h3Container {display:none !important;}
+}

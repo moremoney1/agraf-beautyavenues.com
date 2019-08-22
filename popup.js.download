@@ -1,0 +1,70 @@
+
+        function _buildOptions() {
+            var sTemp = "";
+            sTemp += "height=" + this.height + ",";
+            sTemp += "width=" + this.width + ",";
+            sTemp += "top=" + this.top + ",";
+            sTemp += "left=" + this.left + ",";
+            sTemp += "toolbar=" + ((this.toolbar) ? "yes" : "no") + ",";
+            sTemp += "location=" + ((this.location) ? "yes" : "no") + ",";
+            sTemp += "directories=" + ((this.directories) ? "yes" : "no") + ",";
+            sTemp += "status=" + ((this.status) ? "yes" : "no") + ",";
+            sTemp += "menubar=" + ((this.menubar) ? "yes" : "no") + ",";
+            sTemp += "scrollbars=" + ((this.scrollbars) ? "yes" : "no") + ",";
+            sTemp += "resizable=" + ((this.resizable) ? "yes" : "no") + ",";
+            sTemp += "dependent=" + ((this.dependent) ? "yes" : "no");
+            return (sTemp);
+        }
+        function popupOptions() {
+            this.height = screen.availHeight;
+            this.width = screen.availWidth;
+            this.top = 0;
+            this.left = 0;
+            this.toolbar = false;
+            this.location = false;
+            this.directories = false;
+            this.status = false;
+            this.menubar = false;
+            this.scrollbars = false;
+            this.resizable = false;
+            this.dependent = false;
+            this.build = _buildOptions;
+        }
+        function popup() {
+            var winlink = arguments[0];
+            var winname = arguments[1];
+            var winwidth = arguments[2];
+            var winheight = arguments[3];
+            var winscroll = true;
+            var wintoolbar = true;
+            var winresize = true;
+            winscroll = (arguments[4] == '1') ? true : false;
+            if (arguments.length >= 5) {
+                if (arguments.length >= 6) {
+                    wintoolbar = (arguments[5] == '1') ? true : false;
+                }
+                if (arguments.length >= 7) {
+                    winresize = (arguments[6] == '1') ? true : false;
+                }
+            }
+            var iLeft = ((screen.availWidth / 2) - (winwidth / 2));
+            var iTop = ((screen.availHeight / 2) - (winheight / 2));
+            var oWin = null;
+            var oOption = new popupOptions();
+            oOption.height = winheight;
+            oOption.width = winwidth;
+            oOption.top = iTop;
+            oOption.left = iLeft;
+            oOption.toolbar = wintoolbar;
+            oOption.location = false;
+            oOption.directories = false;
+            oOption.status = false;
+            oOption.menubar = false;
+            oOption.scrollbars = winscroll;
+            oOption.resizable = winresize;
+            oOption.dependent = false;
+            var sOptions = oOption.build();
+            oWin = window.open(((typeof (winlink) == "string") ? winlink : winlink.href), winname, sOptions);
+            oWin.focus();
+            var sHardCoded = 'var oWin = window.open("' + ((typeof (winlink) == "string") ? winlink : winlink.href) + '", "' + winname + '", "' + sOptions + '")';
+        }
